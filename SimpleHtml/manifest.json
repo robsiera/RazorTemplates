@@ -1,0 +1,17 @@
+{
+    "editWitoutPostback": true,
+    "Index": false,
+    "detailMetaTitle": "{{Title}} | desco.be",
+    "templates": {
+        "simplehtml": {
+            "type": "single",
+            "title": "Simple Html",
+            "main": {
+                "template": "simplehtml.cshtml",
+                "schemaInTemplate": false,
+                "optionsInTemplate": false,
+                "additionalDataInTemplate": false
+            }
+        }
+    }
+}

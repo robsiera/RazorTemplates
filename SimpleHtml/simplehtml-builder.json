@@ -1,0 +1,17 @@
+{
+  "formfields": [
+    {
+      "fieldname": "ShowItemTitle",
+      "title": "Render the Item Title",
+      "fieldtype": "checkbox",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "default": "true",
+      "helper": "disable this option if you want to hide the title",
+      "position": "1col1",
+      "dependencies": []
+    }
+  ],
+  "formtype": "object"
+}

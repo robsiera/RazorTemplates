@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "Title": {
+      "type": "string",
+      "title": "Titel"
+    },
+    "Body": {
+      "type": "string",
+      "title": "Body"
+    },
+    "ImageId": {
+      "type": "string",
+      "title": "Image"
+    },
+    "ImageLink": {
+      "type": "string",
+      "title": "Image Click Url"
+    },
+    "ImageLinkTarget": {
+      "type": "string",
+      "title": "Call-to-Action Image Target",
+      "enum": [
+        "_blank"
+      ]
+    },
+    "ButtonText": {
+      "type": "string",
+      "title": "Call-to-Action Button Text"
+    },
+    "ButtonLink": {
+      "type": "string",
+      "title": "Call-to-Action Button Url"
+    },
+    "ButtonLinkTarget": {
+      "type": "string",
+      "title": "Call-to-Action Button Target",
+      "enum": [
+        "_blank"
+      ]
+    }
+  }
+}

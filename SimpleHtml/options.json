@@ -1,0 +1,42 @@
+{
+  "fields": {
+    "Title": {
+      "type": "mltext",
+      "helper": "Titel van het content item"
+    },
+    "Body": {
+      "type": "mlsummernote"
+    },
+    "ImageId": {
+      "type": "imagex",
+      "uploadhidden": false,
+      "fileExtensions": "gif|jpg|jpeg|tiff|png",
+      "fileMaxSize": 2000000,
+      "showOverwrite": false,
+      "showCropper": false
+    },
+    "ImageLink": {
+      "type": "mltext"
+    },
+    "ImageLinkTarget": {
+      "type": "select",
+      "sort": false,
+      "optionLabels": [
+        "Open in New Window"
+      ]
+    },
+    "ButtonText": {
+      "type": "mltext"
+    },
+    "ButtonLink": {
+      "type": "mltext"
+    },
+    "ButtonLinkTarget": {
+      "type": "select",
+      "sort": false,
+      "optionLabels": [
+        "Open in New Window"
+      ]
+    }
+  }
+}

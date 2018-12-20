@@ -1,0 +1,16 @@
+{
+  "parent": "dnnbootstrap-edit",
+  "layout": {
+    "template": "<div><div class=\"row\"><div class=\"col-md-12\" id=\"pos_1_1\"></div></div></div>",
+    "bindings": {
+      "Title": "#pos_1_1",
+      "Body": "#pos_1_1",
+      "ImageId": "#pos_1_1",
+      "ImageLink": "#pos_1_1",
+      "ImageLinkTarget": "#pos_1_1",
+      "ButtonText": "#pos_1_1",
+      "ButtonLink": "#pos_1_1",
+      "ButtonLinkTarget": "#pos_1_1"
+    }
+  }
+}

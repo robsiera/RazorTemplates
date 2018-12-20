@@ -1,0 +1,8 @@
+{
+  "fields": {
+    "ShowItemTitle": {
+      "type": "checkbox",
+      "helper": "disable this option if you want to hide the title"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@inherits Satrabel.OpenContent.Components.OpenContentWebPage
+
+@using System
+@using HolonCom
+@using System.Web
+@using Satrabel.OpenContent.Components
+@using Satrabel.OpenContent.Components.TemplateHelpers
+
+@{ 
+     if (this.Request.QueryString["id"] != null)
+     {
+         return; // don't show on detail page
+     }
+}
+
+<div class="simplehtml mid-@Model.Context.ModuleId">
+    <div class="row">
+        <div class="col-xs-8">
+            <div>@Model.Body</div>
+            @RenderCall2Action(@Model.ButtonText, @Model.ButtonLink, @Model.ButtonLinkTarget)
+        </div>
+        <div class="col-xs-4">
+            @RenderImage(@Model.ImageId, @Model.Title, @Model.ImageLink, @Model.ImageLinkTarget)
+        </div>
+    </div>
+</div>
+
+@helper RenderTitle(dynamic title, dynamic settings)
+{
+    if (string.IsNullOrEmpty(title)) { return; }
+    if (settings == null) { return; }
+
+    bool showTitle = Normalize.DynamicValue(settings.ShowItemTitle, true);
+    if (!showTitle) { return; }
+
+    <h1>@Model.Title</h1>
+}
+
+@helper RenderImage(dynamic imageId, dynamic alttext, dynamic imageLink, dynamic imageLinkTarget)
+{
+    if (imageId == null) { return; }
+
+    var imageObject = ImageUriFactory.CreateImageUri(imageId.id);
+    if (imageObject == null) { return; }
+
+    var altcode = string.Format(@"alt=""{0}""", alttext);
+    if (string.IsNullOrEmpty(imageLink)) 
+    {
+        <img src="@imageObject.UrlFilePath" class="img-responsive" @altcode />
+    }
+    else
+    {
+        var anchor = "btn"+imageLink.Replace("/","");
+        var target = string.Format(@"target=""{0}""", imageLinkTarget);
+
+        <a name="@anchor" class="btn btn-primary" href="@imageLink" @target >
+            <img src="@imageObject.UrlFilePath" class="img-responsive" @altcode />
+        </a>
+    }
+}
+
+@helper RenderCall2Action(dynamic buttonText, dynamic buttonLink, dynamic buttonLinkTarget)
+{
+    if (string.IsNullOrEmpty(buttonText)) { return; }
+    if (string.IsNullOrEmpty(buttonLink)) { return; }
+
+    var anchor = "btn"+buttonLink.Replace("/","");
+    var target = string.Format(@"target=""{0}""", buttonLinkTarget);
+
+    <a name="@anchor" class="btn btn-primary" href="@buttonLink" @target >
+        @buttonText
+    </a>
+}
+
+@functions {
+}

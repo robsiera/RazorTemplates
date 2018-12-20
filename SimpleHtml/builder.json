@@ -1,0 +1,103 @@
+{
+  "formfields": [
+    {
+      "fieldname": "Title",
+      "title": "Titel",
+      "fieldtype": "text",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "helper": "Titel van het content item",
+      "multilanguage": true,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "Body",
+      "title": "Body",
+      "fieldtype": "summernote",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "multilanguage": true,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "ImageId",
+      "title": "Image",
+      "fieldtype": "imagex",
+      "imagexoptions": {
+        "uploadhidden": false,
+        "fileExtensions": "gif|jpg|jpeg|tiff|png",
+        "fileMaxSize": 2000000,
+        "showOverwrite": false,
+        "showCropper": false
+      },
+      "advanced": false
+    },
+    {
+      "fieldname": "ImageLink",
+      "title": "Image Click Url",
+      "fieldtype": "text",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "multilanguage": true,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "ImageLinkTarget",
+      "title": "Call-to-Action Image Target",
+      "fieldtype": "select",
+      "fieldoptions": [
+        {
+          "value": "_blank",
+          "text": "Open in New Window"
+        }
+      ],
+      "advanced": false
+    },
+    {
+      "fieldname": "ButtonText",
+      "title": "Call-to-Action Button Text",
+      "fieldtype": "text",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "multilanguage": true,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "ButtonLink",
+      "title": "Call-to-Action Button Url",
+      "fieldtype": "text",
+      "advanced": true,
+      "required": false,
+      "hidden": false,
+      "multilanguage": true,
+      "index": false,
+      "position": "1col1",
+      "dependencies": []
+    },
+    {
+      "fieldname": "ButtonLinkTarget",
+      "title": "Call-to-Action Button Target",
+      "fieldtype": "select",
+      "fieldoptions": [
+        {
+          "value": "_blank",
+          "text": "Open in New Window"
+        }
+      ],
+      "advanced": false
+    }
+  ],
+  "formtype": "object"
+}

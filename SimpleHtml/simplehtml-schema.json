@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "ShowItemTitle": {
+      "type": "boolean",
+      "title": "Render the Item Title",
+      "default": "true"
+    }
+  }
+}
